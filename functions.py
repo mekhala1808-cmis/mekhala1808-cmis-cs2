@@ -20,12 +20,24 @@ def sphere_volume(radius): #finds the volume of a sphere
 	return 4/3 * math.pi(radius)**3
 
 def avg_volume(a,b): #computes the average volume of two spheres
+	float(a)
+	float(b)
 	average = ((4/3 * math.pi(a)**3)+(4/3 * math.pi(b)**3))/2
 	return float(average)
-def area(a, b, c): #finds the area of a triangle using the lenth of three sides
-	p =(a+b+c)/1
-	return math.sqrt(p*(p-a)(p-b)(p-c))
 
-def right_allign(str"a"):
-	len(str
+def area(a, b, c): #finds the area of a triangle using the lenth of three sides
+	p =(a+b+c)/2
+	return (p*(p-a)*(p-b)*(p-c))**0.5
+
+def right_allign(word):# defines a function that takes a string as an argument and returns that word with additional spaces so that it is perfectly right aligned on the screen
+	return (80 - len(word))*(" ") + word
+
+def center(word):#defines a function that takes a string as an argument and returns that word with additional spaces so that it is perfectly centered on the screen.
+	return (30 - len(word))*(" ") + word
+
+def msg_box(word): #Define a function that takes a string as an argument and returns a message box
+return 
+
+
+
 
