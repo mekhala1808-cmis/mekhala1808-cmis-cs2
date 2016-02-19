@@ -38,8 +38,8 @@ g2=sphere_volume(7)**3
 def avg_volume(a,b): #computes the average volume of two spheres
     m= a/2
     n= b/2
-    y= 1.3333333333333*math.pi*c*c*c
-    z= 1.333333333333*math.pi*d*d*d
+    y= 4/3*math.pi*m*m*m
+    z= 4/3*math.pi*n*n*n
     return (y+z)/2
 h1=avg_volume(10, 20)
 h2=avg_volume(5, 15)
@@ -61,11 +61,32 @@ k1=center("Hello")
 k2=center("Hi")
 
 def msg_box(word): #Define a function that takes a string as an argument and returns a message box
-	return "+" + ((len(word)+4)*"-")+"+"+"\n"+"|"+(2*"")+(word)+(2*"")+"|"+"\n"+"+"+((len(word)+4)*"-")+"+"
+    return "+" + ((len(word)+4)*"-") + "+" + "\n" + "|" + (2*" ") + (word)+ (2*" ") + "|" + "\n" + "+" + ((len(word)+4)*"-") + "+"
 #call all functions again
 l1=msg_box("Hello")
 l2=msg_box("I eat cats!")
 
-
-
-
+print msg_box(str(a1))
+print msg_box(str(a2))
+print msg_box(str(b1))
+print msg_box(str(b2))
+print msg_box(str(c1))
+print msg_box(str(c2))
+print msg_box(str(d1))
+print msg_box(str(d2))
+print msg_box(str(e1))
+print msg_box(str(e2))
+print msg_box(str(f1))
+print msg_box(str(f2))
+print msg_box(str(g1))
+print msg_box(str(g2))
+print msg_box(str(h1))
+print msg_box(str(h2))
+print msg_box(str(i1))
+print msg_box(str(i2))
+print msg_box(j1)
+print msg_box(j2)
+print msg_box(k1)
+print msg_box(k2)
+print l1
+print l2
