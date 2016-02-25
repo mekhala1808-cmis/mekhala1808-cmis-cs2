@@ -10,7 +10,7 @@ b2=sub(7, 8)
 
 def mul(a,b): #compute the product of a and b
 	return a * b
-c1=(4, 4)
+c1=mul(4, 4)
 c2=(5, 9)
 
 def div(a,b): #compute the quotient of a and b
@@ -38,8 +38,8 @@ g2=sphere_volume(7)**3
 def avg_volume(a,b): #computes the average volume of two spheres
     m= a/2
     n= b/2
-    y= 4/3*math.pi*m*m*m
-    z= 4/3*math.pi*n*n*n
+    y= sphere_volume(m)
+    z= sphere_volume(n)
     return (y+z)/2
 h1=avg_volume(10, 20)
 h2=avg_volume(5, 15)
@@ -90,3 +90,4 @@ print msg_box(k1)
 print msg_box(k2)
 print l1
 print l2
+
