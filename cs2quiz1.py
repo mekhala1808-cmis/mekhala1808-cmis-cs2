@@ -1,18 +1,18 @@
 #Part 1: Terminology (15 points)
-#1 1pt) What is the symbol "=" used for?
+#1 1pt) What is the symbol "=" used for? (1)
 # It's an assignment operator. It puts a value into variable. 
 #
 #
-#2 3pts) Write a technical definition for 'function'
+#2 3pts) Write a technical definition for 'function' (3)
 # A sequence of statements that performs an operation.
 #
 #
-#3 1pt) What does the keyword "return" do?
+#3 1pt) What does the keyword "return" do? (1)
 # It spits out the result of the function. 
 #
 #
 #4 5pts) We know 5 basic data types. Write the name for each one and provide two
-#   examples of each below
+#   examples of each below (4.5)
 #	1: float : 0.1, 5.6
 #	2: integer: 3, 100
 #	3: string: "hello", "puppies"
@@ -20,13 +20,13 @@
 #	5: tuple: ("Hello", "Bob", 3, "dog")
 #
 #5 2pts) What is the difference between a "function definition" and a 
-#        "function call"?
+#        "function call"? (2)
 # A function definition is a statement that makes a new function while a function call is a statement that executes a function. 
 #
 #
 #
 #6 3pts) What are the 3 phases that every computer program has? What happens in
-#        each of them
+#        each of them (3)
 #	1: Input - Get data from the keyboard, a file, or another device.
 #	2: Processing - Works out the data recieved.
 #	3: Output - Displays data on the screen or send data to a file or other device.
@@ -47,8 +47,20 @@
 
 import math 
 
+#1 pt for header line (0)
+#3 pt for correct formula (0)
+#1 pt for return value (1)
+#1 pt for parameter name (0)
+#1 pt for function name (0)
+
 def math.sqrt(c1, c2, c3)/ math.pi
     return math.sqrt(c1, c2, c3)/ math.pi
+
+#1pt for header line (1)
+#1pt for parameter names (1.5)
+#1pt for return value (1)
+#1pt for correct output format (
+#3pt for correct use of format function
 
 def output(c1, c2, c3):
     out = """
