@@ -1,3 +1,6 @@
+#Terminology - 14.5 points
+#Programming - 14 points
+#
 #Part 1: Terminology (15 points)
 #1 1pt) What is the symbol "=" used for? (1)
 # It's an assignment operator. It puts a value into variable. 
@@ -59,8 +62,8 @@ def math.sqrt(c1, c2, c3)/ math.pi
 #1pt for header line (1)
 #1pt for parameter names (1.5)
 #1pt for return value (1)
-#1pt for correct output format (
-#3pt for correct use of format function
+#1pt for correct output format (1)
+#3pt for correct use of format function (3)
 
 def output(c1, c2, c3):
     out = """
@@ -72,6 +75,14 @@ Area of C3   c3
 """.format(c1, c2, c3)
     return out
 
+#1pt header line (1)
+#1pt getting input (1)
+#1pt converting input (0)
+#1pt for calling output function (0.5)
+#2pt for correct diameter formula (0)
+#1pt for variable names (1)
+
+
 def main(): 
     c1=raw_input("Area of C1: ")
     c2=raw_input("Area of C2: ")
@@ -80,5 +91,9 @@ def main():
 out = output(c1, c2, c3)
 print out
 
+#1pt for calling main (1)
+
 main()
         
+#1pt explanatory comments (0)
+#1pt code format (1)
