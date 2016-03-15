@@ -9,5 +9,13 @@ print "I'm thinking of a number from " + str(minimumnumber) + " to " + str(maxim
 targetnumber= raw_input( "What do you think it is?: ")
 
 def output(minimumnumber, maximumnumber, targetnumber):
-	out = """
+	out = """ """
+
+if targetnumber == True:
+    msg = "That's correct! You must be psychic!"
+else:
+    msg = "
+
+randomint(begginingnumber, endingnumber)
+
 

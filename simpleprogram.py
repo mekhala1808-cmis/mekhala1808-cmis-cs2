@@ -1,4 +1,4 @@
-import math
+pythonimport math
 def mul(x, y):
 	return x * y
 
