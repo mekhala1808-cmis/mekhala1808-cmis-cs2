@@ -1,33 +1,38 @@
 import math
 import random
 
-minimumnumber= raw_input( "What is the minimum number?: ")
-maximumnumber= raw_input( "What is the maximum number?: ")
-
-targetnumber= random.random()
-
-def output(minimumnumber, maximumnumber, targetnumber):
-	out = """
-What is the minumum number? {}
-What is the maximum number? {}
+def main():
+    minimumnumber = raw_input( "What is the minimum number?: ")
+    maximumnumber = raw_input( "What is the maximum number?: ")
+    targetnumber = random.randint(minimumnumber, maximumnumber)
+    output = """
+I'm thinking of a number from {} to {}
 """.format(minimumnumber, maximumnumber)
 
+    print output
 
+    guessing = raw_input("What do you think it is?: ")
+    if  targetnumber == guessing:
+        print """
+The target was {}.
+Your guess was {}.
+That's correct! You must be psychic!
+""".format(targetnumber, guessing)
 
-def output(minimumnumber, maximumnumber):
-    out = """
-I'm thinkng of a number from {} to {}.
-""".format(minmumnumber, maximumnumber)
+    elif targetnumber < guessing:
+        difference = guessing -targetnumber
+        print """
+The target was {}.
+Your guess was {}.
+That's under by {}.
+""".format(targetnumber, guessing, difference)
 
+    elif targetnumber > guessing:
+        difference = abs(targetnumber - guessing)
+        print """
+The target was {}.
+Your guess was {}.
+That's over by {}.
+""".format(targetnumber, guessing, difference)
 
-
-guess = raw_input("What do you think it is?: ")
-
-if guessing == targetnumber
-    return = "That's correct! You must be psychic!"
-else:
-    guessing == False 
-	return = "The target was random.random()"
-
-
-
+main()
