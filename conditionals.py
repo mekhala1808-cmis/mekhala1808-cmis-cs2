@@ -1,87 +1,48 @@
+# New York City has been taken over by zombies and you have a gun and 5 choices of bullets for it.
+#The computer will ask which type of bullet you'd like to shoot with.
+#The player will have to choose and type the bullet they want for their gun, each bullet has a different fatality rate caused upon the enemy. 
+
 import math
 import random
 
-def eat(item):
-
-    if item == "lava":
-        strength = 0    
-    elif item == "grapes":
-        strength = 1
-    elif item == "peanuts":
-        strength = 2
-    elif item == "shoes":
-        strength = 3
-    elif item == "bear liver":
-        strength = 4
-    elif item == "mud":
-        strength = 5
-    elif item == "toe nails":
-        strength = 6
-    elif item == "finger nails":
-        strength = 7
-    elif item == "tuna":
-        strength = 8
-    elif item == "eternity":
-        strength = 9
-    elif item == "fried rice":
-        strength = 10
-    else:
-        strength = random.randint(0,10)
-    return strength * random.random()
-
-def getAttackValue():
- 
-    number = int(raw_input("Type attack value (0-99): "))
-    if number > 99 or number < 0:
-        number = random.randint(0, 99)
-    attackValue = float(number)/100
-    return attackValue    
-
-def wrestle(playerStrength, enemyStrength, playerAttackValue):
-
-    targetValue = random.random()
-    playerAttackResult = playerStrength + abs(playerAttackValue - targetValue)    
-    enemyAttackResult =  enemyStrength + targetValue
-    if playerAttackResult > enemyAttackResult:
-        return True
-    else:
-        return False
-
-def resultTemplate(playerStrength, enemyStrength, result):
-
-    if result == True:
-        msg = "wins"
-    else:
-        msg = "loses"
-    return """
-Player strength: {}
-Enemy strength: {}
-Player {}!
-""".format(playerStrength, enemyStrength, msg)
-
 def main():
-
-
-    playerFood = raw_input("What do you want to eat? ")
-    enemy1Food = raw_input("What does enemy 1 eat? ")
-    enemy2Food = raw_input("What does enemy 2 eat? ")
-
-    playerStrength = eat(playerFood)
-    enemy1Strength = eat(enemy1Food)
-    enemy2Strength = eat(enemy2Food)
-
-    playerAttackValue1 = getAttackValue()
-    result1 = wrestle(playerStrength, enemy1Strength, playerAttackValue1)
-
-    playerAttackValue2 = getAttackValue()   
-    result2 = wrestle(playerStrength, enemy2Strength, playerAttackValue2)
-    
+    place = raw_input( "Where in NewYork City are you?: ")
+    amountofzombies = raw_input( "About how many zombies are about to attack you?: ")
     output = """
-You ate {}.
-Enemy 1 ate {}.
-Enemy 2 ate {}.
-""".format(playerFood, enemy1Food, enemy2Food)
-    output += resultTemplate(playerStrength, enemy1Strength, result1)
-    output += resultTemplate(playerStrength, enemy2Strength, result2)
-
+You're in {} !? You gotta find a place to hide or you'll get eaten! {} zombies? that's not good... USE YOUR GUN
+""".format(place, amountofzombies)
     print output
+typeofbullet = raw_input( "Choose what bullet you want to use with your gun: ")
+if bullet == marshmallow:
+	print "YOU HAVE BEEN EATEN"
+elif bullet== bouncyball:
+	print "You've been bitten."
+elif bullet == paintball:
+	print "They are grabbing onto you."
+elif bullet == wood:
+	print "Keep shooting at them, you will get away."
+elif bullet == titanium:
+	print "You got away!"
+elif bullet == diamond:
+	print "YOU KILLED THEM!"
+
+def shoot(bullet):
+
+    if bullet == "marshmallow":
+	fatality = 0    
+    elif bullet == "bouncyball":
+	fatality = 1
+    elif bullet == "paint ball":
+	fatality = 2
+    elif bullet == "wood":
+        fatality = 3
+    elif bullet == "titanium":
+        fatality = 4
+    elif bullet == "diamond":
+        fatality = 5
+    else:
+        fatality = random.randint(0,5)
+    return fatality * random.random()
+
+
+
