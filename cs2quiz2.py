@@ -49,9 +49,7 @@
 
 import math
 
-
 print "Type in 3 different numbers (decimals are ok)"
-
 
 def main():
     N1 = float(raw_input("A: "))
