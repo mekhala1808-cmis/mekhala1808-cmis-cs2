@@ -24,9 +24,9 @@
 #problem1_d) 5
 #
 #problem2_a) True
-#problem2_b) True
+#problem2_b) False
 #problem2_c) False
-#problem2_d) False
+#problem2_d) True
 #
 #problem3_a) c
 #problem3_b) b
