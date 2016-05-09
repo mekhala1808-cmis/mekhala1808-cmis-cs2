@@ -20,7 +20,7 @@ USE YOUR GUN
 """.format(place, amountofzombies)
     print output
 
-    bullet = raw_input( "Choose what bullet you want to use with your gun- marshmallow, bouncyball, paintball, wood, titanium, or diamond: ")
+bullet = raw_input( "Choose what bullet you want to use with your gun- marshmallow, bouncyball, paintball, wood, titanium, or diamond: ")
 
 def shoot(bullet):
 
@@ -39,6 +39,7 @@ def shoot(bullet):
     else:
         fatality = random.randint(0,5)
     return fatality * random.random()
+shoot(bullet)
 
 def chosen(bullet):
     if bullet == marshmallow:
@@ -60,14 +61,17 @@ food = raw_input("You need some food to eat so you keep your energy up. Here are
 def eat(food):
 	if food == glue
         print "The glue's clogging your lungs! You cant breath! Drink some water NOW!..."
-    if food == raw rabit meat 
+    elif food == raw rabit meat 
         print "It's full of bacteria, you are gonna get sick. Here's some medicine..."
-    if food == expired milk
+    elif food == expired milk
         print "You've thrown up from the rotten milk, here take the medicine on the table at your right..."
+eat(food)
+main()
+
  
 
 
-main()
+
 
 
 
