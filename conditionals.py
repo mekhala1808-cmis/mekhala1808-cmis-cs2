@@ -64,7 +64,8 @@ def eat(food):
     elif food == raw rabit meat 
         print "It's full of bacteria, you are gonna get sick. Here's some medicine..."
     elif food == expired milk
-        print "You've thrown up from the rotten milk, here take the medicine on the table at your right..."
+        print "You've thrown up from the rotten milk, here take the medicine 
+on the table at your right..."
 eat(food)
 main()
 
