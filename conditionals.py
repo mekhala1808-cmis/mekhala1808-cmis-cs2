@@ -1,16 +1,15 @@
-# The world has been taken over by zombies and you have a gun and 5 choices of bullets for it.
-#The computer will ask where you are and how many zombies are about to attack you.
-#Then the computer will respond and tell you to hide and use your gun to protect youself.
-#Next, the computer asks what type of bullet you'd like to shoot with.
-#You will have to choose and type the bullet you want for your gun, each bullet has a different fatality rate caused upon the enemy. 
+# The world has been taken over by zombies.The computer will ask where you are and how many zombies are about to attack you.
+#Then the computer will respond and tell you to hide and use your gun to protect youself. You have 5 choices of bullets for it. 
+#The computer asks what type of bullet you'd like to shoot with.
+#You will have to choose and type in the bullet you want for your gun, each bullet has a different fatality rate caused upon the enemy. 
 # The computer will respond according to what type of bullet you choose.
-
+# After you choose your bullet and see the outcome of it, you will be asked to choose what to eat so your energy is sustained. Each food also has a different effect upon you. You're then moved to a buliding and are asked about where you want to hide. Depending on what you choose there will be a different outcome on how safe you are from the zombies. Finally, you're asked to choose your final destination. It determines whether you win or lose this game. If you choose to go to the airport you win, if not you stay and get eaten by zombies. 
 import math
 import random
 
 def main():
-    place = raw_input( "Where are you?: ")
-    amountofzombies = raw_input( "About how many zombies are about to attack you?: ")
+    place = raw_input( "Where are you right now?: ")
+    amountofzombies = int(raw_input( "About how many zombies are about to attack you?: "))
     output = """
 You're at {} !? 
 You gotta find a place to hide or you'll get eaten! 
@@ -19,6 +18,14 @@ that's not good...
 USE YOUR GUN
 """.format(place, amountofzombies)
     print output
+main()
+
+zombiecure = raw_input("Do you have the cure for turning into a zombie?: ")
+
+def have(zombiecure):
+    if zombiecure == "yes":
+        print "Good. Use it when needed"
+have(zombiecure)
 
 bullet = raw_input( "Choose what bullet you want to use with your gun- marshmallow, bouncyball, paintball, wood, titanium, or diamond: ")
 
@@ -42,7 +49,7 @@ shoot(bullet)
 
 def chosen(bullet):
     if bullet == "marshmallow":
-	    print "YOU HAVE BEEN EATEN, You are gonna turn into a zombie"
+	    print "YOU HAVE BEEN EATEN, You are gonna turn into a zombie. Use the zombie cure if you have it. If not find one quickly!"
     elif bullet == "bouncyball":
 	    print "You've been bitten."
     elif bullet == "paintball":
@@ -66,17 +73,51 @@ def eat(food):
         print "You've thrown up from the rotten milk, here take the medicine on the table at your right... "
 eat(food)
 
-hide = raw_input("You've got to find a place to hide now before the zombies find you. Where are you going to hide?- under the table, behind the wall, or in the closet: ")
+water = raw_input("Are you going to drink some water before you leave? yes or no:")
+
+def drink(water):
+    if water == "yes":
+        print "GOOD you're hydrated!"
+    else:
+        print "BAD CHOICE. You have a higher chance of dying."
+drink(water)
+
+hide = raw_input("You're at a building now. You've got to find a place to hide now before the zombies find you. Where are you going to hide?- under the table, behind the wall, or in the closet: ")
 
 def spot(hide):
     if hide == "under the table":
         print "You have a high chance of getting caught but you'll survive."
     elif hide == "behind the wall":
         print "You're going to be found by the zombies. RUN as fast as you can."
-    elif hide == "in the closet":
+    else:
         print "They won't find you there! :D "
 spot(hide)
-main()
+
+leave = raw_input("Did you leave after all the zombies passed?: ")
+
+def building(leave):
+    if leave == "yes":
+        print "You're completely safe!"
+building(leave)
+
+transport = raw_input("How will you get to your next destination?: ")
+
+def find(transport):
+    if transport == "car":
+        print "Okay you're in the car! Drive fast!"
+    else:
+        print "That's a bad idea but you'll make it as long as you move fast." 
+find(transport)
+
+safety = raw_input("Choose your final destination, this determines whether you live or die. Your options are to go to the- airport or anywhere that isnt the airport: ")
+
+def travel(safety):
+    if safety == "airport":
+        print "Good choice. From there you can take a plane to another place and get away from the zombies.CONGRATULATIONS YOU WIN" 
+    else:
+        print "Since you've chosen to stay in the place taken over by zombies, you are going to die. Sorry can't help you anymore.YOU LOSE" 
+travel(safety)
+
 
  
 
