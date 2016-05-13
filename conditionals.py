@@ -1,29 +1,49 @@
 # The world has been taken over by zombies.The computer will ask where you are and how many zombies are about to attack you.
 #Then the computer will respond and tell you to hide and use your gun to protect youself. You have 5 choices of bullets for it. 
+#The computer will then ask if you have the zombie cure, you respond with either yes or no. 
+#If you have the cure the computer will tell you to use it when needed. If not it will continue on to the next question. 
 #The computer asks what type of bullet you'd like to shoot with.
 #You will have to choose and type in the bullet you want for your gun, each bullet has a different fatality rate caused upon the enemy. 
 # The computer will respond according to what type of bullet you choose.
-# After you choose your bullet and see the outcome of it, you will be asked to choose what to eat so your energy is sustained. Each food also has a different effect upon you. You're then moved to a buliding and are asked about where you want to hide. Depending on what you choose there will be a different outcome on how safe you are from the zombies. Finally, you're asked to choose your final destination. It determines whether you win or lose this game. If you choose to go to the airport you win, if not you stay and get eaten by zombies. 
+# After you choose your bullet and see the outcome of it, you will be asked to choose what to eat so your energy is sustained. Each food also has a different effect upon you. 
+#Next you're asked whether you are going to drink water before you leave. If you respong with yes, the computer will respong saying that's good. If you type in no, the computer will print out saying that it was a bad choice. 
+#You're then moved to a buliding and are asked about where you want to hide. Depending on what you choose there will be a different outcome on how safe you are from the zombies. 
+#Next, the computer will ask you if you've left your hiding spot after all the zombies have passed by. If you say yes, you're completely safe. If you say no the computer will move on to the next question.
+#The computer then asks how you will get to your final destination. If you type in car, the computer will respond by saying that's good. If you say any other form of transportation, the computer will say it's a bad idea but you'll still be safe either way. 
+#Finally, you're asked to choose your final destination. It determines whether you win or lose this game. If you choose to go to the airport you win, if not you stay and get eaten by zombies. 
 import math
 import random
 
 def main():
     place = raw_input( "Where are you right now?: ")
-    amountofzombies = int(raw_input( "About how many zombies are about to attack you?: "))
     output = """
 You're at {} !? 
 You gotta find a place to hide or you'll get eaten! 
-{} zombies? 
-that's not good... 
+Hopefully not too may zombies are around you. 
+If you need to defend youself from them...
 USE YOUR GUN
-""".format(place, amountofzombies)
-    print output
+""".format(place)
+    print output    
 main()
+
+amountofzombies = int(raw_input( "About how many zombies are about to attack you?: "))
+
+def number(amountofzombies):
+    if amountofzombies > 100 and amountofzombies <= 1000: 
+        print "There are too many zombies! Here's a forcefield that will prtoect you from them until you find safety." 
+    elif not amountofzombies > 100:
+        print "You will get away safely. Dont worry."
+    elif amountofzombies == 0:
+        print "You're super safe and lucky!"
+    elif amountofzombies < 1000:
+        print "You had no chance of surviving, so I teleported you to a safer place."
+number(amountofzombies)
+
 
 zombiecure = raw_input("Do you have the cure for turning into a zombie?: ")
 
 def have(zombiecure):
-    if zombiecure == "yes":
+    if zombiecure == "yes" or "I have it":
         print "Good. Use it when needed"
 have(zombiecure)
 
