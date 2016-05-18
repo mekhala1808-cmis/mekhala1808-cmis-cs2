@@ -50,8 +50,10 @@
 
 def averageodd(number):
     number = raw_input("Next number: ")
+#BASE CASE
     if number == "":
         print averageodd
+#RECURSIVE CASE
     elif number == not bool(number):
         return print "The average of the odd numbers are " + str(averageodd(odds))
     odds = not bool(number)
