@@ -32,5 +32,24 @@ def sumofodds(x):
             x += 1
         else:
             total += x
-            
+    while x > 0: 
+        print stop
+        stop -= 1
+countfrom(-10, 10)
+###
+def grid(w, h):
+    row = ""
+    result "\n"
+    while h > 0:
+        while w > 0:
+            row += "."
+            w -= 1
+        result +- row + "\n"
+        h -= h
+    return result
+print grid(10, 10)
+
+
+    return 
+""            
 
