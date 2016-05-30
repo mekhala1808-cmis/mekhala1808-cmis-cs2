@@ -48,8 +48,16 @@ def grid(w, h):
         h -= h
     return result
 print grid(10, 10)
+###
+def grid(w, h):
+    out = ""
+    while h > 0:
+        while w > 0:
+        out += "."
+        w -= 1 
+    out += "\n"
+    h -= 1
 
 
-    return 
-""            
+           
 
